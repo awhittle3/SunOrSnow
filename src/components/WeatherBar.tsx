@@ -106,7 +106,6 @@ export class WeatherBar extends React.Component<WeatherBarProps, WeatherBarState
                                     let tempStr = parts[1].split(",");
                                     temp = parseFloat(tempStr[tempStr.length - 1]);
                                     condStr = tempStr[0].trim();
-                                    console.log(condStr);
                                     let newCurrentState = update(this.state.currentState, {$set: {dayName: weekday, temperature: temp, condition: condStr}});
                                     this.setState({currentState: newCurrentState})
                                 } else {
