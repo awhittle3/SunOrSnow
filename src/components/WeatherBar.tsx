@@ -3,7 +3,6 @@ import update from 'immutability-helper';
 import { parseString } from "xml2js";
 
 import { WeatherDay } from "./WeatherDay";
-import { WeatherCurrent } from "./WeatherCurrent";
 
 const initialState = { 
     dayState: [
