@@ -1,0 +1,20 @@
+body {
+    background-color: #3CB6CE;
+    font-family: Arial;
+}
+
+.text-uagreen{
+    color: #007C41 !important;
+} 
+
+.text-uayellow{
+    color: #FFDB05 !important;
+} 
+
+.bg-uagreen{
+    background-color: #007C41 !important;
+}
+
+.bg-uayellow{
+    background-color: #FFDB05 !important;
+}
