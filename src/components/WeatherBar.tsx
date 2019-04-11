@@ -16,7 +16,7 @@ const initialState = {
 };
 type WeatherBarState = Readonly<typeof initialState>;
 type WeatherBarProps = {
-
+  url: string,
 };
 
 export class WeatherBar extends React.Component<WeatherBarProps, WeatherBarState> {
@@ -90,7 +90,7 @@ export class WeatherBar extends React.Component<WeatherBarProps, WeatherBarState
   }
 
   fetchAndUpdateState() {
-    let url: URL = new URL("https://www.weather.gc.ca/rss/city/ab-71_e.xml");
+    let url: URL = new URL(this.props.url);
     // console.log("Fetching...");
     fetch(url.toString(), {
       method: "GET",

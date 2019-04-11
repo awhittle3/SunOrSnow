@@ -6,7 +6,7 @@ import { WeatherBar } from "./components/WeatherBar"
 
 ReactDOM.render(
   <div>
-    <WeatherBar />
+    <WeatherBar url={"https://www.weather.gc.ca/rss/city/ab-71_e.xml"}/>
   </div>,
   document.getElementById("root")
 );
