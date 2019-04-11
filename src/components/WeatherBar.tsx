@@ -82,7 +82,7 @@ export class WeatherBar extends React.Component<WeatherBarProps, WeatherBarState
 
   componentDidMount() {
     this.fetchAndUpdateState();
-    setInterval(() => { this.fetchAndUpdateState(); }, 1000 * 60 * 60);
+    setInterval(() => { this.fetchAndUpdateState(); }, 1000 * 60 * 30);
   }
 
   fetchAndUpdateState() {
