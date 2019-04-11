@@ -17,8 +17,8 @@ export class WeatherDay extends React.Component<WeatherDayProps, WeatherState> {
       cardName = "card text-uagreen bg-uayellow mb-3";
     }
     return <h1>
-      <div className={cardName} style={{ maxHeight: 100, fontSize: 24 }}>
-        <div className="card-header" style={{ padding: 5 }}>{this.props.day}</div>
+      <div className={cardName} style={{ maxHeight: 114, fontSize: 28}}>
+        <div className="card-header" style={{ padding: 5 }}><b>{this.props.day}</b></div>
         <div className="card-body" style={{ paddingTop: 10 }}>
           <div className="container">
             <div className="row">
@@ -26,7 +26,7 @@ export class WeatherDay extends React.Component<WeatherDayProps, WeatherState> {
                 <i className="material-icons" style={{ fontSize: 40 }}>{this.getWeatherIcon(this.props.condition)}</i>
               </div>
               <div className="col-sm-8">
-                <h1 className="card-title" style={{ fontSize: 28 }}>{this.props.temperature}&deg;C</h1>
+                <h1 className="card-title" style={{ fontSize: 32 }}><b>{this.props.temperature}&deg;C</b></h1>
               </div>
             </div>
           </div>
@@ -71,6 +71,7 @@ export class WeatherDay extends React.Component<WeatherDayProps, WeatherState> {
       case "periods of rain":
       case "showers":
       case "chance of showers":
+      case "light rainshower":
         return "invert_colors";
       default:
         return "blur_on";

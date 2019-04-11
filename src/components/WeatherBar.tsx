@@ -52,9 +52,13 @@ export class WeatherBar extends React.Component<WeatherBarProps, WeatherBarState
   }
 
   render() {
-    return <div className="container">
-      <div className="row">
-        <div className="col-xs-2" key={-1}>
+    const containerStyle: React.CSSProperties = {
+
+    };
+
+    return <div className="container" style={containerStyle}>
+      <div className="row align-items-end" >
+        <div className="col-xs-3 align-self-start" key={-1}>
           <WeatherDay
             day="Today"
             temperature={this.state.currentState.temperature}
@@ -69,7 +73,7 @@ export class WeatherBar extends React.Component<WeatherBarProps, WeatherBarState
   makeRow() {
     let index: number = 0;
     return this.state.dayState.map((day) => {
-      return <div className="col-xs-2" key={index++}>
+      return <div className="col-xs-3 align-self-start" key={index++}>
         <WeatherDay
           day={day.dayName}
           temperature={day.temperature}
