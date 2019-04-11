@@ -45,6 +45,7 @@ export class WeatherDay extends React.Component<WeatherDayProps, WeatherState> {
       case "mist":
       case "cloudy periods":
       case "mainly cloudy":
+      case "mostly cloudy":
         return "wb_cloudy";
       case "a mix of sun and cloud":
       case "clearing":
@@ -69,6 +70,7 @@ export class WeatherDay extends React.Component<WeatherDayProps, WeatherState> {
       case "freezing rain":
       case "periods of rain":
       case "showers":
+      case "chance of showers":
         return "invert_colors";
       default:
         return "blur_on";
