@@ -53,7 +53,7 @@ export class WeatherBar extends React.Component<WeatherBarProps, WeatherBarState
 
   render() {
     const containerStyle: React.CSSProperties = {
-
+      maxWidth: "3000px"
     };
 
     return <div className="container" style={containerStyle}>

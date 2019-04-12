@@ -17,16 +17,16 @@ export class WeatherDay extends React.Component<WeatherDayProps, WeatherState> {
       cardName = "card text-uagreen bg-uayellow mb-3";
     }
     return <h1>
-      <div className={cardName} style={{ maxHeight: 114, fontSize: 28}}>
-        <div className="card-header" style={{ padding: 5 }}><b>{this.props.day}</b></div>
+      <div className={cardName} style={{ maxHeight: 114, fontSize: 32}}>
+        <div className="card-header" style={{ padding: 5, textAlign: "center" }}><b>{this.props.day}</b></div>
         <div className="card-body" style={{ paddingTop: 10 }}>
           <div className="container">
             <div className="row">
               <div className="col-sm-4" style={{ textAlign: "center" }}>
-                <i className="material-icons" style={{ fontSize: 40 }}>{this.getWeatherIcon(this.props.condition)}</i>
+                <i className="material-icons" style={{ fontSize: 48 }}>{this.getWeatherIcon(this.props.condition)}</i>
               </div>
               <div className="col-sm-8">
-                <h1 className="card-title" style={{ fontSize: 32 }}><b>{this.props.temperature}&deg;C</b></h1>
+                <h1 className="card-title" style={{ fontSize: 36 }}><b>{Math.round(this.props.temperature)}&deg;C</b></h1>
               </div>
             </div>
           </div>
