@@ -72,6 +72,7 @@ export class WeatherDay extends React.Component<WeatherDayProps, WeatherState> {
       case "showers":
       case "chance of showers":
       case "light rainshower":
+      case "snow or rain":
         return "invert_colors";
       default:
         return "blur_on";
