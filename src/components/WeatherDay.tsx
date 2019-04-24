@@ -40,6 +40,9 @@ export class WeatherDay extends React.Component<WeatherDayProps, WeatherState> {
       case "sunny":
       case "mainly sunny":
       case "clear":
+      case "mainly clear":
+      case "mostly clear":
+      case "clearing":
         return "wb_sunny";
       case "cloudy":
       case "mist":
@@ -50,6 +53,7 @@ export class WeatherDay extends React.Component<WeatherDayProps, WeatherState> {
       case "a mix of sun and cloud":
       case "clearing":
       case "a few clouds":
+      case "partly cloudy":
         return "cloud_circle";
       case "chance of flurries":
       case "a few flurries":
@@ -64,6 +68,8 @@ export class WeatherDay extends React.Component<WeatherDayProps, WeatherState> {
         return "ac_unit";
       case "periods of rain or freezing rain":
       case "periods of rain or snow":
+      case "rain or snow":
+      case "chance of flurries or rain showers":
       case "rain or freezing rain":
       case "flurries or rain showers":
       case "periods of freezing drizzle":
