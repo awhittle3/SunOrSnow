@@ -36,7 +36,8 @@ export class WeatherDay extends React.Component<WeatherDayProps, WeatherState> {
   }
 
   getWeatherIcon(condition: string): string {
-    switch (condition.toLowerCase()) {
+    let str:string = condition.toLowerCase();
+    switch (str) {
       case "sunny":
       case "mainly sunny":
       case "clear":
@@ -68,7 +69,9 @@ export class WeatherDay extends React.Component<WeatherDayProps, WeatherState> {
         return "ac_unit";
       case "periods of rain or freezing rain":
       case "periods of rain or snow":
+      case "periods of snow or rain":
       case "rain or snow":
+      case "snow or rain":
       case "chance of flurries or rain showers":
       case "rain or freezing rain":
       case "flurries or rain showers":
@@ -79,8 +82,20 @@ export class WeatherDay extends React.Component<WeatherDayProps, WeatherState> {
       case "chance of showers":
       case "light rainshower":
       case "snow or rain":
+      case "rain":
+      case "light rain":
         return "invert_colors";
       default:
+        if(str.includes("snow") || str.includes("flurries")) {
+          return "ac_unit";
+        } else if (str.includes("rain") || str.includes("shower")){
+          return "invert_colors";
+        } else if(str.includes("cloud") || str.includes("mist") || str.includes("fog")) {
+          return "cloud_circle";
+        } else if (str.includes("sun") || str.includes("clear")){
+          return "wb_sunny";
+        }
+
         return "blur_on";
     }
   }
