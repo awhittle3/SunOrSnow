@@ -1,5 +1,8 @@
 # Sun or Snow - A Weather Widget
 
+> [!CAUTION]
+> NOTE: Deprecated project. NPM packages significantly out of date.
+
 This is an HTML weather widget that can be used with Brightsign screens.
 
 ![Screen Shot](ScreenShot.png)
